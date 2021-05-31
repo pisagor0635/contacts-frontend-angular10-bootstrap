@@ -1,0 +1,34 @@
+<h2 class = "text-center">Contact List</h2>
+<br>
+<table class="table table-striped">
+    <thead>
+        <tr>
+             <th>First Name</th>
+             <th>Surname</th>
+             <!--<th>Email</th>-->
+             <th>Phone Number</th>
+             <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let contact of contacts">
+            <td>{{contact.firstName}}</td>
+            <td>{{contact.lastName}}</td>
+           <!-- <td>{{contact.email}}</td>-->
+            <td>{{contact.phoneNumber}}</td>
+            <td>
+                <button (click) = "updateContact(contact.id)" class="btn btn-info">Update</button>
+                <button (click) = "deleteContact(contact.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+                <button (click) = "contactDetails(contact.id)" class="btn btn-warning" style="margin-left: 10px;">View</button>
+
+            </td>
+        </tr>
+    </tbody>
+
+
+
+
+
+
+</table>
